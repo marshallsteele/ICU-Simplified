@@ -111,7 +111,7 @@ export const builds = [
         exoticGearLink:"http://gw2skills.net/editor/?PigAgylVwYYLsNWJO0KdNfA-DyQUhoBNuDH3YEJBqUASPLwyomRAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PigAgylVwYYLsNWJO0KdNfA-DyQYhohK6cHSPsxISCUpAkeWgGKcGBqA-e",
         buildTemplate:"[&DQcBHQoaKD4jDyMPBBNqAc8SawGPAY8BsxK8AQAAAAAAAAAAAAAAAAAAAAADLwBaAFcAAA==]",
-        primaryWeapons:["Dagger" + "Sword"],
+        primaryWeapons:["Dagger", "Sword"],
         secondaryWeapons:[],
         runes:"Infiltration",
         sigils:["Force", "Accuracy"],
