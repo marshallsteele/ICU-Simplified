@@ -157,25 +157,16 @@ const SotOWeapons = {
 }
 
 class BuildsUtil {
-    private static checkExpansionRequired(expansionSpecs:any, build:build) {
-        var eliteSpec = expansionSpecs[build.class];
-        if (build.spec === eliteSpec.name) return true;
-        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
-            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
-            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
-            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
-    }
-
     private static checkHoTRequired(build:build) {
-        return this.checkExpansionRequired(HoTSpecs, build);
+        return build.spec === (HoTSpecs as any)[build.class].name;
     }
 
     private static checkPoFRequired(build:build) {
-        return this.checkExpansionRequired(PoFSpecs, build);
+        return build.spec === (PoFSpecs as any)[build.class].name;
     }
 
     private static checkEoDRequired(build:build) {
-        return this.checkExpansionRequired(EoDSpecs, build);
+        return build.spec === (EoDSpecs as any)[build.class].name;
     }
 
     private static checkSotORequired(build:build) {
@@ -184,15 +175,39 @@ class BuildsUtil {
             || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === weapons[0])
             || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === weapons[1])
             || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === weapons[1])) return true;
+        
+        //Check Weapon Master Training
+        var eliteSpec = (HoTSpecs as any)[build.class];
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
+            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
+            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+        eliteSpec = (PoFSpecs as any)[build.class];
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
+            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
+            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+        eliteSpec = (EoDSpecs as any)[build.class];
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
+            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
+            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+    }
 
+    private static checkJWRequired(build:build) {
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === 'Spear')
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === 'Spear')) return true;
     }
 
     public static getRequiredExpansions(build:build) {
         var requiredExpansions = [];
+        console.log(build);
         if (this.checkHoTRequired(build)) requiredExpansions.push("HoT");
         if (this.checkPoFRequired(build)) requiredExpansions.push("PoF");
         if (this.checkEoDRequired(build)) requiredExpansions.push("EoD");
         if (this.checkSotORequired(build)) requiredExpansions.push("SotO");
+        if (this.checkJWRequired(build)) requiredExpansions.push("JW");
+        console.log(requiredExpansions);
         return requiredExpansions;
     }
 }
