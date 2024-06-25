@@ -2,6 +2,7 @@ import { Card, Row, Col, Image, Container } from "react-bootstrap";
 import { build } from "../Helpers/BuildHelper";
 import { ExpansionLogos } from "../../assets/gw2Assets/expansionLogos/ExpansionLogos";
 import paintSmear from "../../assets/gw2Assets/accents/pattern4.png";
+import BuildsUtil from "../../assets/BuildsUtil";
 
 interface Props {
     title:string;
@@ -34,11 +35,11 @@ function BuildCard(props: Props) {
                 </Row>
                 <Row className="justify-content-start" style={{  margin:"0px", height: '50px'}}>
                 {/*EXPANSION INFO ROW*/}
-                    {Array.from({length: props.build.recExpansions.length}).map((_, idx) => (
+                    {Array.from({ length: BuildsUtil.getRequiredExpansions(props.build).length}).map((_, idx) => (
                     <Col className="justify-self-end" style={{ height: "50px", maxWidth: '60px', padding:"0px" }} key={idx}>
                         <Image 
                         style={{height: "100%", backgroundColor: "rgba(255, 255, 255, 0.75)", borderRadius: "25%"}} 
-                        src={(ExpansionLogos as any)[props.build.recExpansions[idx]].small} />
+                        src={(ExpansionLogos as any)[BuildsUtil.getRequiredExpansions(props.build)[idx]].small} />
                     </Col>
                     ))}
                 </Row>
