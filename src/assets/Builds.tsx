@@ -463,7 +463,7 @@ export const builds = [
         exoticGearLink:"http://gw2skills.net/editor/?PeQAIlxWwarauZt3uWcqOuLvRVA-DSJUwRB/ZUrEoCFgMvFQDFmBAVA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PeQAIlxWwarauZt3uWcqOuLvRVA-DSJYwRB/ZUrEoCFgMvFQDFmBAVA-e",
         buildTemplate:"[&DQMmLwY3RioNGxQBCxsBARAbXwEaG14BCRsSAQAAAAAAAAAAAAAAAAAAAAADMwA1AFcAAA==]",
-        primaryWeapons:["hammer"],
+        primaryWeapons:["Hammer"],
         secondaryWeapons:[],
         runes:"Dragonhunter",
         sigils:["Force", "Impact"],
