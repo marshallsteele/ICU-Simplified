@@ -1,5 +1,5 @@
 export const builds = [
-    { id: 1, role:"DPS", dmgType: "Power", boon: "none",  class:"Elementalist", spec:"Catalyst", recExpansions:["EoD", "SotO"],
+    { id: 1, role:"DPS", dmgType: "Power", boon: "none",  class:"Elementalist", spec:"Catalyst",
         notes: ["You need at least 57% base crit chance (you will get +25% from fury, and about 18% from Elemental Empowerment+Empowered Empowerment)"],
         exoticGearLink:"http://gw2skills.net/editor/?PGgEwEW2AblRxuYk4or8FNB-DSIUR0wfIchrVCUhCQm3CohCzAAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PGgEwEW2AblRxuYk4or8FNB-DSIYR0wfG1KBqQBIzbB0QhZAAA-e",
@@ -16,7 +16,7 @@ export const builds = [
             "Use [Relentless Fire] when you enter Fire attunement.", 
             "Use [Glyph of Storms] when you enter Air attunement."]
     }, 
-    { id: 2, role:"DPS", dmgType: "Power", boon: "none",  class:"Elementalist", spec:"Weaver", recExpansions:["PoF", "SotO"],
+    { id: 2, role:"DPS", dmgType: "Power", boon: "none",  class:"Elementalist", spec:"Weaver",
         notes: ["You need at least 60% base crit chance (you will get +25% crit chance from fury, and +15% from Superior Elements)",
             "This build is a simplified version of Power Weaver, but Weaver is still a very fast class. Don’t be discouraged if you struggle with it at first."
         ],
@@ -35,7 +35,7 @@ export const builds = [
             "When attuned to Fire as the main use all weapon skills and the utilities [Primordial Stance] and [Arcane Blast]"
         ]
 }, 
-    { id: 3, role:"DPS", dmgType: "Power", boon: "none",  class:"Engineer", spec:"Scrapper", recExpansions:["HoT"],
+    { id: 3, role:"DPS", dmgType: "Power", boon: "none",  class:"Engineer", spec:"Scrapper",
         notes: ["You need at least 45% base crit chance (you will get +25% from fury, +15% from High Caliber, +15% from Hematic Focus)",
             "If using the exotic gear set, use Force and Accuracy Sigils instead"
         ],
@@ -53,7 +53,7 @@ export const builds = [
             "Use all utility skills, heal, and elite off-cooldown."
         ]
 },
-    { id: 4, role:"DPS", dmgType: "Power", boon: "none",  class:"Engineer", spec:"Holosmith", recExpansions:["PoF", "SotO"],
+    { id: 4, role:"DPS", dmgType: "Power", boon: "none",  class:"Engineer", spec:"Holosmith",
         notes: ["You need at least 45% base crit chance (you will get +25% from fury, +15% from High Caliber, +15% from Hematic Focus)"],
         exoticGearLink:"http://gw2skills.net/editor/?PeQAIlJw2YRsDGKOuLvvTA-DyQUhogsfHKRZUbCURBY7ZBaowZEoC-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PeQAIlJw2YRsDGKOuLvvTA-DSIYRUwXG1mAVUA2eWgGKcGBqA-e",
@@ -71,7 +71,7 @@ export const builds = [
             "Outside of Photon Forge, use Hammer 2 and 5 off-cooldown.  (Skip other Hammer skills as they are usually a DPS loss.)"
         ]
 },
-    { id: 5, role:"DPS", dmgType: "Power", boon: "none",  class:"Engineer", spec:"Mechanist", recExpansions:["EoD", "SotO"],
+    { id: 5, role:"DPS", dmgType: "Power", boon: "none",  class:"Engineer", spec:"Mechanist",
         notes: ["You need at least 45% base crit chance (you will get +25% from fury, +15% from High Caliber, +15% from Hematic Focus)"],
         exoticGearLink:"http://gw2skills.net/editor/?PeQAIlxWwgrauZt3uWcqOuLvxOA-DSIURUwfIchrVCUhCQm3CohCzAAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PeQAIlxWwgrauZt3uWcqOuLvxOA-DSIYRUwfG1KBqQBIzbB0QhZAAA-e",
@@ -88,7 +88,7 @@ export const builds = [
             "Use F1, F2, F3 skills shortly after using the Hammer 5"
         ]
 },
-    { id: 6, role:"DPS", dmgType: "Power", boon: "none",  class:"Guardian", spec:"Dragonhunter", recExpansions:["HoT"],
+    { id: 6, role:"DPS", dmgType: "Power", boon: "none",  class:"Guardian", spec:"Dragonhunter",
         notes: ["You need at least 40% base crit chance (you will get +25% from fury, +25% from resolution because of Righteous Instincts, +10% from Radiant Power)",
             "Do NOT spend resources to make exotic Dragon’s gear"
         ],
@@ -106,7 +106,7 @@ export const builds = [
             "Using the first cast of GS5 and F1 will offer a damage multiplier to your skills. Only use the first cast."
         ]
 },
-    { id: 7, role:"DPS", dmgType: "Power", boon: "none",  class:"Mesmer", spec:"Chronomancer", recExpansions:["HoT", "SotO"],
+    { id: 7, role:"DPS", dmgType: "Power", boon: "none",  class:"Mesmer", spec:"Chronomancer",
         notes: ["Exotic gear is possible for this build, but not recommended because of the consequent damage loss."],
         exoticGearLink:"http://gw2skills.net/editor/?PigAgylVwYYLsNWJO0KdNfA-DyQUhoBNuDH3YEJBqUASPLwyomRAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PigAgylVwYYLsNWJO0KdNfA-DyQYhohK6cHSPsxISCUpAkeWgGKcGBqA-e",
@@ -123,7 +123,7 @@ export const builds = [
             "Use your F1 Shatter only when you have 3 clones available."
         ]
 },
-    { id: 8, role:"DPS", dmgType: "Power", boon: "none",  class:"Mesmer", spec:"Virtuoso", recExpansions:["EoD"],
+    { id: 8, role:"DPS", dmgType: "Power", boon: "none",  class:"Mesmer", spec:"Virtuoso",
         notes: ["You need at least 60% base crit chance (you will get +40% from fury)."],
         exoticGearLink:"http://en.gw2skills.net/editor/?PiwAEhzlVwWZbMNmLOyKdxdA-DyQUhoGvD7Q4CHhUoCVgMPLQDFmBAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PiwAEhzlVwUYTsNmLOyKdxdA-DyQYhomzfHUwZEhUoCVgMPLQDFmBAVA-e",
@@ -141,7 +141,7 @@ export const builds = [
             "Use 1 charge of mantra of pain off cooldown"
         ]
 },
-    { id: 9, role:"DPS", dmgType: "Power", boon: "none",  class:"Necromancer", spec:"Reaper", recExpansions:["HoT"],
+    { id: 9, role:"DPS", dmgType: "Power", boon: "none",  class:"Necromancer", spec:"Reaper",
         notes: ["You need at least 75% base crit chance (you will get +25% from fury)."],
         exoticGearLink:"http://gw2skills.net/editor/?PSQAElRUwciaHBOlC3YkOSXlNbA-DyQUhw5vjCUwpwFynOUQESgKUAy8WANUYGAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PSQAElRUwciaHBOlC3YkOSXlNbA-DyQYhogzfHUwZEhEoCFgMvFQDFmBAA-e",
@@ -159,7 +159,7 @@ export const builds = [
             "While in Greatsword use Greatsword 2 twice, With Greatsword 3 and an auto attack chain in between them before going back to step 1."
         ]
 },
-    { id: 10, role:"DPS", dmgType: "Power", boon: "none",  class:"Ranger", spec:"Soulbeast", recExpansions:["PoF"],
+    { id: 10, role:"DPS", dmgType: "Power", boon: "none",  class:"Ranger", spec:"Soulbeast",
         notes: ["You need at least 45% base crit chance (you will get +40% from fury, +15% from flanking the target from Hunter’s Tactics)"],
         exoticGearLink:"http://gw2skills.net/editor/?POgAwelZkxu6agBut2mZmWyX+P9T+2OeB-DSIUR0wfIchrVCUhCQm3CohCzAAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?POgAwelZkxu6agBut2mZmWyX+P9T+2OeB-DSIYR0wfG1KBqQBIzbB0QhZAAA-e",
@@ -177,7 +177,7 @@ export const builds = [
             "In most situations its left to right with the utilities, F2 or F3, the left to right with the weapon skills."
         ]
 },
-    { id: 11, role:"DPS", dmgType: "Power", boon: "none",  class:"Revenant", spec:"Vindicator", recExpansions:["EoD"],
+    { id: 11, role:"DPS", dmgType: "Power", boon: "none",  class:"Revenant", spec:"Vindicator",
         notes: ["You need at least 50% base crit chance (you will get +25% from fury, and +25% from Roiling Mists)",
             "Staff is an optional weapon for more CC"
         ],
@@ -198,7 +198,7 @@ export const builds = [
             "Make sure to use/not cancel the second hit from 5 (Deathstrike)"
         ]
 },
-    { id: 12, role:"DPS", dmgType: "Power", boon: "none",  class:"Thief", spec:"Daredevil", recExpansions:["HoT"],
+    { id: 12, role:"DPS", dmgType: "Power", boon: "none",  class:"Thief", spec:"Daredevil",
         notes: ["If using the exotic gear set, use Force and Accuracy Sigils instead"],
         exoticGearLink:"http://gw2skills.net/editor/?PaQAYlFwmYNMM2JO6XbtdA-DSIURUwXGRkAVUA2eWgGKcGBqA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PaQAYlFwmYNMM2JO6XbtdA-DSIYRUwXG1mAVUA2eWgGKcGBqA-e",
@@ -215,7 +215,7 @@ export const builds = [
             "Use 7 (Prepare Pitfall) off-cooldown, then trigger it while using 2 (Weakening Charge)."
         ]
 },
-    { id: 13, role:"DPS", dmgType: "Power", boon: "none",  class:"Thief", spec:"Deadeye", recExpansions:["PoF"],
+    { id: 13, role:"DPS", dmgType: "Power", boon: "none",  class:"Thief", spec:"Deadeye",
         notes: ["If using the exotic gear set, use Force and Accuracy Sigils instead"],
         exoticGearLink:"http://gw2skills.net/editor/?PagAgilVwiYSMM2IO6LbvWA-DSIUR0wXGRkAVUA2+HgGKcGBqA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PagAgilVwiYSMM2IO6LbvWA-DSIYR0wXG1mAVUA2+HgGKcGBqA-e",
@@ -233,7 +233,7 @@ export const builds = [
             "Fill with auto-attacks.  Do not spend initiative on any other dagger skills."
         ]
 },
-    { id: 14, role:"DPS", dmgType: "Power", boon: "none",  class:"Warrior", spec:"Berserker", recExpansions:["HoT"],
+    { id: 14, role:"DPS", dmgType: "Power", boon: "none",  class:"Warrior", spec:"Berserker",
         notes: ["You need at least 60% base crit chance (you will get +25% from fury and +15% while in berserk mode from Smash Brawler)"],
         exoticGearLink:"http://gw2skills.net/editor/?PKgAcelRwWYTMKmJO+WatKA-DSIUR0wfIchbTCUhCQmnFohCzAAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PKgAcelRwWYTMKmJO+WatKA-DSIYR0wfGtJBqQBIzzC0QhZAAA-e",
@@ -250,7 +250,7 @@ export const builds = [
             "Use weapon skills to fill gaps making sure to use one regularly to extend the thief relic duration."
         ]
 },
-    { id: 15, role:"DPS", dmgType: "Power", boon: "none",  class:"Warrior", spec:"Spellbreaker", recExpansions:["PoF"],
+    { id: 15, role:"DPS", dmgType: "Power", boon: "none",  class:"Warrior", spec:"Spellbreaker",
         notes: ["You will need at least 75% base crit chance (you will get +25% from fury).",
             "As you get more used to the build, you can lower your base crit chance to 63%, as you do get more precision from Attacker’s Insight."
         ],
@@ -268,7 +268,7 @@ export const builds = [
             "Use your F1, 5 and 4 off cooldown"
         ]
 },
-    { id: 16, role:"DPS", dmgType: "Condition", boon: "none",  class:"Elementalist", spec:"Tempest", recExpansions:["HoT"],
+    { id: 16, role:"DPS", dmgType: "Condition", boon: "none",  class:"Elementalist", spec:"Tempest",
         notes: ["If using the exotic gear set, use Malice and Smoldering Sigils instead"],
         exoticGearLink:"http://gw2skills.net/editor/?PGgAs2lZwuYasKGJOqOmtLA-DSRUfBFaGNcenRCKgQkAK8YANp4sCUB-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PGgAs2lZwuYasKGJOqOmtLA-DSJYmRD/ZkgCIOJgCPGQTKOrAVA-e",
@@ -285,7 +285,7 @@ export const builds = [
             "Your Elite’s attack (Flame Barrage) is instant-cast and is the only ability that will not interrupt Overload!"
         ]
 }, 
-    { id: 17, role:"DPS", dmgType: "Condition", boon: "none",  class:"Engineer", spec:"Mechanist", recExpansions:["EoD"],
+    { id: 17, role:"DPS", dmgType: "Condition", boon: "none",  class:"Engineer", spec:"Mechanist",
         notes: [],
         exoticGearLink:"http://gw2skills.net/editor/?PegAoqlxySYwMXWMOuL5xKA-DSJUmRD/hgKOOJQHKAFeMgmUcWBA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PegAoqlxySYwMXWMOuL5xKA-DSJYmRD/ZEnEoDFgCPGQTKOrAA-e",
@@ -302,7 +302,7 @@ export const builds = [
             "DO NOT activate Superconducting Signet.  Doing so is a DPS loss."
         ]
 }, 
-    { id: 18, role:"DPS", dmgType: "Condition", boon: "none",  class:"Guardian", spec:"Firebrand", recExpansions:["PoF"],
+    { id: 18, role:"DPS", dmgType: "Condition", boon: "none",  class:"Guardian", spec:"Firebrand",
         notes: ["If using the exotic gear set, use Malice and Smoldering Sigils instead",
             "DPS will be higher in a group because of Ashes of the Just."
         ],
@@ -322,7 +322,7 @@ export const builds = [
             "Use 2, 3, and 8 off-cooldown."
         ]
 }, 
-    { id: 19, role:"DPS", dmgType: "Condition", boon: "none",  class:"Guardian", spec:"Willbender", recExpansions:["EoD", "SotO"],
+    { id: 19, role:"DPS", dmgType: "Condition", boon: "none",  class:"Guardian", spec:"Willbender",
         notes: [],
         exoticGearLink:"http://gw2skills.net/editor/?PWgAo+lVw6YqsKWLW0WXxSA-DSRUfBdYGNc4jR7CoTC44YAL8eWBVA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PWgAo+lVw6YqsKWLW0WXxSA-DSRYfB1bGNcCnRbKgOkAK8YAL8eWBVA-e",
@@ -340,7 +340,7 @@ export const builds = [
             "Use your other weapon skills with the following priority 3 > 2 > 5."
         ]
 }, 
-    { id: 20, role:"DPS", dmgType: "Condition", boon: "none",  class:"Mesmer", spec:"Mirage", recExpansions:["PoF"],
+    { id: 20, role:"DPS", dmgType: "Condition", boon: "none",  class:"Mesmer", spec:"Mirage",
         notes: [],
         exoticGearLink:"http://gw2skills.net/editor/?PigAcrlRwiYIsEmJWKP1vOA-DSJUmRJ/ZkpQIXFgCPGQTKOrAVA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PigAcrlRwiYIsEmJWKP1vOA-DSJYmRJ/ZkpQIXFgCPGQTKOrAVA-e",
@@ -358,7 +358,7 @@ export const builds = [
             "Use 3, 4, and 5 off-cooldown, but delay them in favor of Cloak > Ambush if it is available."
         ]
 }, 
-    { id: 21, role:"DPS", dmgType: "Condition", boon: "none",  class:"Mesmer", spec:"Virtuoso", recExpansions:["EoD"],
+    { id: 21, role:"DPS", dmgType: "Condition", boon: "none",  class:"Mesmer", spec:"Virtuoso",
         notes: ["You need at least 60% base crit chance (you will get +40% from fury). This is critical for this spec to work."],
         exoticGearLink:"http://gw2skills.net/editor/?PiABgyh3lVwWZJMEmLW6WdxdA-DSRUmRPUE+BBNHPF6UB+eBQTKOrAVA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PiABgyh3lVwWZJMEmLW6WdxdA-DSZYfhCYG9EhiQ6PGxThOVgvXA0kizKQFA-e",
@@ -375,7 +375,7 @@ export const builds = [
             "Use your heal to remove the cooldown for your phantasms(5 skill) on focus to be able to cast it"
         ]
 }, 
-    { id: 22, role:"DPS", dmgType: "Condition", boon: "none",  class:"Necromancer", spec:"Harbinger", recExpansions:["EoD", "SotO"],
+    { id: 22, role:"DPS", dmgType: "Condition", boon: "none",  class:"Necromancer", spec:"Harbinger",
         notes: [],
         exoticGearLink:"http://gw2skills.net/editor/?PSgAo+lhG6ADcpxuqSXbkWsX1xfA-DSJUmRD/hgKOXFQISAFeMgGZcWBqA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PSgAo+lhG6ADcpxuqSXbkWsX1xfA-DSRYfBBaGNcfnRuKgQkAK8YANy4sCUB-e",
@@ -393,7 +393,7 @@ export const builds = [
             "Leave shroud after using Shroud 2 3x."
         ]
 }, 
-    { id: 23, role:"DPS", dmgType: "Condition", boon: "none",  class:"Necromancer", spec:"Scourge", recExpansions:["PoF", "SotO"],
+    { id: 23, role:"DPS", dmgType: "Condition", boon: "none",  class:"Necromancer", spec:"Scourge",
         notes: [],
         exoticGearLink:"http://gw2skills.net/editor/?PSgAo+lRUxAZXMNGJWsX1PVA-DSJUmRD/hgKOXFQHSAFeMgGZcDAqA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PSgAo+lRUxAZXMNGJWsX1PVA-DSJYmRD/ZkrCoDJgCPGQjMuBAVA-e",
@@ -410,7 +410,7 @@ export const builds = [
             "Cast all weapon skills, [Signet of Spite] & [Plaguelands] off cooldown."
         ]
 }, 
-    { id: 24, role:"DPS", dmgType: "Condition", boon: "none",  class:"Ranger", spec:"Druid", recExpansions:["HoT", "SotO"],
+    { id: 24, role:"DPS", dmgType: "Condition", boon: "none",  class:"Ranger", spec:"Druid",
         notes: ["Pet: Jacaranda"],
         exoticGearLink:"http://gw2skills.net/editor/?POgAg+lZwoYfsN2JW6P3t/RMH-DSJUmRD/ZUgCIOJgCPGQTKOrAVA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?POgAg+lZwoYfsN2JW6P3t/RMH-DSJYmRD/ZUgCIOJgCPGQTKOrAVA-e",
@@ -426,7 +426,7 @@ export const builds = [
             "Use all weapon, utility, elite, and beast skills off-cooldown."
         ]
 }, 
-    { id: 25, role:"DPS", dmgType: "Condition", boon: "none",  class:"Thief", spec:"Specter", recExpansions:["EoD"],
+    { id: 25, role:"DPS", dmgType: "Condition", boon: "none",  class:"Thief", spec:"Specter",
         notes: ["Scepter in one set, dagger in the other set."],
         exoticGearLink:"http://gw2skills.net/editor/?PaABsitjlhy8YHME2JO2WXxKA-DSJUmRP/hgKOSpQuqAFeMgGZcWBqA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PaABsitjlhy8YHME2JO2WfxKA-DSJYmRP/ZEpUIXVgCPGQjMOrAVA-e",
@@ -443,7 +443,7 @@ export const builds = [
             "Use Siphon off-cooldown to restore initiative to be able to keep casting Scepter 3."
         ]
 },
-    { id: 26, role: "BoonDPS", dmgType: "Condition", boon: "Alacrity", class:"Engineer", spec:"Mechanist", recExpansions:["EoD"],
+    { id: 26, role: "BoonDPS", dmgType: "Condition", boon: "Alacrity", class:"Engineer", spec:"Mechanist",
         notes: ["Exotic buils is same as ascended build, just be aware crafting Ritualist gear is quite expensive. Consider making ascended gear instead, if possible."],
         exoticGearLink:"",
         ascendedGearLink:"http://gw2skills.net/editor/?PegAoqlxyaZwMXWMOOLpRVA-DSJYyRD/ZEnEoDFgCPGQjMOrAVA-e",
@@ -458,7 +458,7 @@ export const builds = [
             "Use your Elite, F1 and weapon skills 2, 3 and 4 off cooldown."
         ]
 }, 
-    { id: 27, role: "BoonDPS", dmgType: "Power", boon: "Alacrity", class:"Engineer", spec:"Mechanist", recExpansions:["EoD", "SotO"],
+    { id: 27, role: "BoonDPS", dmgType: "Power", boon: "Alacrity", class:"Engineer", spec:"Mechanist",
         notes: [],
         exoticGearLink:"http://gw2skills.net/editor/?PeQAIlxWwarauZt3uWcqOuLvRVA-DSJUwRB/ZUrEoCFgMvFQDFmBAVA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PeQAIlxWwarauZt3uWcqOuLvRVA-DSJYwRB/ZUrEoCFgMvFQDFmBAVA-e",
@@ -473,7 +473,7 @@ export const builds = [
             "Use your Elite, F1 and weapon skills 2, 3 and 5 off cooldown."
         ]
 }, 
-    { id: 28, role: "BoonDPS", dmgType: "Power", boon: "Alacrity", class:"Mesmer", spec:"Chronomancer", recExpansions:["HoT", "SotO"],
+    { id: 28, role: "BoonDPS", dmgType: "Power", boon: "Alacrity", class:"Mesmer", spec:"Chronomancer",
         notes: ["You need at least 75% base crit chance (you will get +25% from fury)",
             "This build will give you 100% boon duration with these instructions.",
             "If you are having trouble keeping 100% boon uptime, do NOT change gear or utility.",
@@ -495,7 +495,7 @@ export const builds = [
             "When not doing any of the steps above, sprinkle in weapon 3 -> 2 skills + wells"
         ]
 }, 
-    { id: 29, role: "BoonDPS", dmgType: "Condition", boon: "Alacrity", class:"Necromancer", spec:"Scourge", recExpansions:["PoF", "SotO"],
+    { id: 29, role: "BoonDPS", dmgType: "Condition", boon: "Alacrity", class:"Necromancer", spec:"Scourge",
         notes: ["Exotic buils is same as ascended build, just be aware crafting Ritualist gear is quite expensive. Consider making ascended gear instead, if possible."],
         exoticGearLink:"",
         ascendedGearLink:"http://gw2skills.net/editor/?PSgAo+lNkxADcSVNt0GZkWsX1PfA-DSJYyRD/ZkrCoDJgCPGQjMuBAA-e",
@@ -511,7 +511,7 @@ export const builds = [
             "Use all weapon skills (2,3,4,5) and your elite [Plaguelands] off cooldown."
         ]
 },
-    { id: 30, role: "BoonDPS", dmgType: "Condition", boon: "Quickness", class:"Guardian", spec:"Firebrand", recExpansions:["PoF", "SotO"],
+    { id: 30, role: "BoonDPS", dmgType: "Condition", boon: "Quickness", class:"Guardian", spec:"Firebrand",
         notes: ["Exotic buils is same as ascended build, just be aware crafting Ritualist gear is quite expensive. Consider making ascended gear instead, if possible.",
             "You need at least 50% base crit chance (you will get +25% from fury, and +25% from Roiling Mists)",
             "If you need to bring different utilities for a fight, replace Mantra of Flame and Purging Flames, but not any other utilities."
@@ -531,7 +531,7 @@ export const builds = [
             "Torch 4 and Mantras are instant casts, they won’t interrupt any other skills. Use them while casting other skills."
         ]
 }, 
-    { id: 31, role: "BoonDPS", dmgType: "Power", boon: "Quickness", class:"Mesmer", spec:"Chronomancer", recExpansions:["HoT", "SotO"],
+    { id: 31, role: "BoonDPS", dmgType: "Power", boon: "Quickness", class:"Mesmer", spec:"Chronomancer",
         notes: ["You need at least 75% base crit chance (you will get +25% from fury)",
             "This build will give you 100% boon duration with these instructions.",
             "If you are having trouble keeping 100% boon uptime, do NOT change gear or utility.",
@@ -553,7 +553,7 @@ export const builds = [
             "When not doing any of the steps above, sprinkle in weapon 3 -> 2 skills + wells"
         ]
 }, 
-    { id: 32, role: "BoonDPS", dmgType: "Condition", boon: "Quickness", class:"Necromancer", spec:"Harbinger", recExpansions:["EoD", "SotO"],
+    { id: 32, role: "BoonDPS", dmgType: "Condition", boon: "Quickness", class:"Necromancer", spec:"Harbinger",
         notes: [],
         exoticGearLink:"http://gw2skills.net/editor/?PSgAo+lhG6ALZpluqYXbkWsX1xVA-DSJUmRD/hgKOXFQISAFeMgGZcWBA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PSgAo+lhG6ALZpluqYXbkWsX1xVA-DSJYmRD/ZkrCIEJgCPGQjMuBAVA-e",
@@ -570,7 +570,7 @@ export const builds = [
             "Use Shroud off Cooldown."
         ]
 }, 
-    { id: 33, role: "BoonDPS", dmgType: "Power", boon: "Quickness", class:"Revenant", spec:"Herald", recExpansions:["HoT", "SotO"],
+    { id: 33, role: "BoonDPS", dmgType: "Power", boon: "Quickness", class:"Revenant", spec:"Herald",
         notes: ["You need at least 50% base crit chance (you will get +25% from fury, and +25% from Roiling Mists)"],
         exoticGearLink:"http://gw2skills.net/editor/?PmQAElxQKMPyi1RXMOCjRSiMCqgJ7lezC-DyQUhog8zfHKogDhLctSgKUAy8sANUYGAA-e",
         ascendedGearLink:"http://gw2skills.net/editor/?PmQAElxQKMPyi1RXMOCjRSiMCqgJ7lezC-DSIYRUwfG1KBqQBIzzC0QhZAAA-e",
