@@ -209,13 +209,11 @@ class BuildsUtil {
 
     public static getRequiredExpansions(build:build) {
         var requiredExpansions = [];
-        console.log(build);
         if (this.checkHoTRequired(build)) requiredExpansions.push("HoT");
         if (this.checkPoFRequired(build)) requiredExpansions.push("PoF");
         if (this.checkEoDRequired(build)) requiredExpansions.push("EoD");
         if (this.checkSotORequired(build)) requiredExpansions.push("SotO");
         if (this.checkJWRequired(build)) requiredExpansions.push("JW");
-        console.log(requiredExpansions);
         return requiredExpansions;
     }
 }
