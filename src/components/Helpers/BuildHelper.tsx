@@ -7,7 +7,6 @@ export interface build {
     boon:string;
     class:string;
     spec:string;
-    recExpansions:string[];
     notes:string[];
     exoticGearLink:string;
     ascendedGearLink:string;
