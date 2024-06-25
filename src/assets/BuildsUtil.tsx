@@ -156,6 +156,8 @@ const SotOWeapons = {
     'Necromancer': ['Sword', 'Sword']
 }
 
+const JWWeapon = "Spear"
+
 class BuildsUtil {
     private static checkHoTRequired(build:build) {
         return build.spec === (HoTSpecs as any)[build.class].name;
@@ -201,8 +203,8 @@ class BuildsUtil {
     }
 
     private static checkJWRequired(build:build) {
-        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === 'Spear')
-            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === 'Spear')) return true;
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === JWWeapon)
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === JWWeapon)) return true;
     }
 
     public static getRequiredExpansions(build:build) {
