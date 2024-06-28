@@ -1,4 +1,4 @@
-import { Button, Col, Container, ListGroup, Modal, Nav, Navbar, Row, Image } from "react-bootstrap";
+import { Button, Col, Container, ListGroup, Modal, Nav, Navbar, Row, Image, Spinner } from "react-bootstrap";
 import {getAllClassBuilds} from "../Helpers/BuildHelper";
 import BuildCard from "./BuildCard";
 import { specImages } from "../../assets/gw2Assets/specs/SpecImages";
@@ -56,6 +56,8 @@ function ClassCatalogue(props:Props) {
 
     const handleClose = () => setShowModal(false);
     const handleShow = () => setShowModal(true);
+
+    const [imageLoading, setImageLoading] = useState(true);
 
     function handleBuildSelect(build:build) {
       setBuild({
@@ -163,7 +165,8 @@ function ClassCatalogue(props:Props) {
                   </Container>
                   <br />
                   <Container style={{padding:0}}>
-                  <Image fluid rounded src={buildImages.get('build' + build.id)}></Image>
+                  <Spinner style={{display: imageLoading ? "block" : "none"}} ></Spinner>
+                  <Image fluid rounded src={buildImages.get('build' + build.id)} style={{display: imageLoading ? "none" : "block"}} onLoad={() => setImageLoading(false)}></Image>
                   </Container>
                   <br />
                 </Col>

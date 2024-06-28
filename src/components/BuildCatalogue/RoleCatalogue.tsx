@@ -1,4 +1,4 @@
-import { Container, Row, Col, Modal, Button, Image, ListGroup, Nav, Navbar } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button, Image, ListGroup, Nav, Navbar, Spinner } from "react-bootstrap";
 import { specImages } from "../../assets/gw2Assets/specs/SpecImages";
 import BuildCard from "./BuildCard";
 import { getAllAlacrityDPSBuilds, getAllConditionDPSBuilds, getAllPowerDPSBuilds, getAllQuicknessDPSBuilds } from "../Helpers/BuildHelper";
@@ -41,6 +41,8 @@ function RoleCatalogue(props:Props) {
 
     const handleClose = () => setShowModal(false);
     const handleShow = () => setShowModal(true);
+
+    const [imageLoading, setImageLoading] = useState(true);
 
     function handleBuildSelect(build:build) {
       setBuild({
@@ -143,7 +145,8 @@ function RoleCatalogue(props:Props) {
                   </Container>
                   <br />
                   <Container style={{padding:0}}>
-                  <Image fluid rounded src={buildImages.get('build' + build.id)}></Image>
+                  <Spinner style={{display: imageLoading ? "block" : "none"}} ></Spinner>
+                  <Image fluid rounded src={buildImages.get('build' + build.id)} style={{display: imageLoading ? "none" : "block"}} onLoad={() => setImageLoading(false)}></Image>
                   </Container>
                   <br />
                 </Col>
