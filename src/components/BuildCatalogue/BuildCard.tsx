@@ -13,11 +13,6 @@ interface Props {
     onClick:() => void;
 }
 
-const styles = {
-    card: {objectFit:"cover", opacity: "0.5", height: "350px"} as React.CSSProperties,
-    hoverCard: {objectFit:"cover", opacity: "1", height: "350px", cursor:"pointer"} as React.CSSProperties
-}
-
 function BuildCard(props: Props) {
     const [hoverState, setHoverState] = useState(false);
 
