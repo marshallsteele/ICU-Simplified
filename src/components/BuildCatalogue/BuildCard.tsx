@@ -3,6 +3,7 @@ import { build } from "../Helpers/BuildHelper";
 import { ExpansionLogos } from "../../assets/gw2Assets/expansionLogos/ExpansionLogos";
 import paintSmear from "../../assets/gw2Assets/accents/pattern4.png";
 import BuildsUtil from "../../assets/BuildsUtil";
+import { useState } from "react";
 
 interface Props {
     title:string;
@@ -12,9 +13,16 @@ interface Props {
     onClick:() => void;
 }
 
+const styles = {
+    card: {objectFit:"cover", opacity: "0.5", height: "350px"} as React.CSSProperties,
+    hoverCard: {objectFit:"cover", opacity: "1", height: "350px"} as React.CSSProperties
+}
+
 function BuildCard(props: Props) {
-    return <Card data-bs-theme="dark" onClick={props.onClick} className="specCard">
-        <Card.Img className="specCardImage"  variant="top" style={{ objectFit:"cover", opacity: "0.5", height: "350px"}} src={props.image} />
+    const [hoverState, setHoverState] = useState(false);
+
+    return <Card data-bs-theme="dark" onMouseEnter={() => setHoverState(true)} onMouseLeave={() => setHoverState(false)} onClick={props.onClick} className="specCard">
+        <Card.Img className="specCardImage"  variant="top" style={hoverState ? styles.hoverCard : styles.card} src={props.image} />
         <Card.ImgOverlay>
         <Card.Body className="w-100 h-100 p-0 m-0">
             <Image src={paintSmear} style={{ maxWidth:"300px", width:"100%", position:"absolute", zIndex:0, margin:-16, opacity:0.7}}></Image>
