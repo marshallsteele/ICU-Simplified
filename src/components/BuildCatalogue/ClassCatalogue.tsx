@@ -6,11 +6,17 @@ import { build } from "../Helpers/BuildHelper";
 import { useRef, useState } from "react";
 
 interface Props {
-  buildImages:Map<string, string>
+  buildImages:Map<string, string>;
+  runes:any[];
+  sigils:any[];
+  relics:any[];
 }
 
 function ClassCatalogue(props:Props) {
     let buildImages = props.buildImages;
+    let runes = props.runes;
+    let sigils = props.sigils;
+    let relics = props.relics;
 
     var guardianBuilds = getAllClassBuilds("Guardian");
     var revenantBuilds = getAllClassBuilds("Revenant");
@@ -92,6 +98,50 @@ function ClassCatalogue(props:Props) {
       }
     }
 
+    function getRuneImg(build:build) {
+      var icon = "";
+      var runeSuffix = build.runes;
+      for (let i = 0; i < runes.length; i++) {
+        if (runes[i].name == "Superior Rune of " + runeSuffix 
+          || runes[i].name == "Superior Rune of the " + runeSuffix) 
+        {
+          icon = runes[i].icon;
+          break;
+        }
+      }
+      return icon;
+    }
+
+    function getSigilImg(build:build) {
+      var icon = [];
+      for (let i = 0; i < build.sigils.length; i++) {
+        var sigilSuffix = build.sigils[i];
+        for (let j = 0; j < sigils.length; j++) {
+          if (sigils[j].name == "Superior Sigil of " + sigilSuffix 
+            || sigils[j].name == "Superior Sigil of the " + sigilSuffix) 
+          {
+            icon[i] = sigils[j].icon;
+            break;
+          }
+        }
+      }
+      return icon;
+    }
+
+    function getRelicImg(build:build) {
+      var icon = "";
+      var relicSuffix = build.relic;
+      for (let i = 0; i < relics.length; i++) {
+        if (relics[i].name == "Relic of " + relicSuffix 
+          || relics[i].name == "Relic of the " + relicSuffix) 
+        {
+          icon = relics[i].icon;
+          break;
+        }
+      }
+      return icon;
+    }
+
     const guardianRef = useRef<HTMLBRElement | null>(null);
     const revenantRef = useRef<HTMLBRElement | null>(null);
     const warriorRef = useRef<HTMLBRElement | null>(null);
@@ -138,15 +188,22 @@ function ClassCatalogue(props:Props) {
                     <Row>
                       <Col>
                       <h3>Runes</h3>
+                      <Image fluid rounded src={getRuneImg(build)}></Image>
+                      <br></br>
                       {build.runes}
                       </Col>
                       <Col>
                       <h3>Sigils</h3>
+                      <Image fluid rounded src={getSigilImg(build)[0]}></Image>
+                      {build.sigils.length > 1 ? <Image fluid rounded src={getSigilImg(build)[1]}></Image> : ""}
+                      <br></br>
                       {build.sigils.length > 0 ? build.sigils[0] : ""}
                       {build.sigils.length > 1 ? "/" + build.sigils[1] : ""}
                       </Col>
                       <Col>
                       <h3>Relic</h3>
+                      <Image fluid rounded src={getRelicImg(build)}></Image>
+                      <br></br>
                       {build.relic}
                       </Col>
                     </Row>

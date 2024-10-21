@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Container } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 
 interface Props {
     changePage:(page:string) => void
@@ -7,7 +7,7 @@ interface Props {
 function LandingPage(props:Props) {
     return <Container style={{color:"white"}}>
         <Container className="justify-content-center">
-            <h1 style={{alignSelf:"center"}}>Welcome to VIP ICU's Simplified Builds</h1>
+            <h1 style={{alignSelf:"center"}}>Welcome to ICU Simplified Builds</h1>
             <br />
             <Container style={{padding:16, margin:0, backgroundColor: "rgba(0, 0, 0, 0.45)", color:"white", borderRadius: "1rem"}}>
                 <h4>
@@ -24,10 +24,11 @@ function LandingPage(props:Props) {
                 </h4>
             </Container>
             <br />
-            <ButtonGroup style={{width:"100%"}}>
-                <Button  onClick={() => props.changePage("role")}><h2>Sort By Role</h2></Button>
-                <Button  onClick={() => props.changePage("class")}><h2>Sort By Class</h2></Button>
-            </ButtonGroup>
+                <Row className="justify-content-between">
+                    <Button style={{width:"40%"}} onClick={() => props.changePage("role")}><h2>Sort By Role</h2></Button>
+                    <Button style={{width:"40%"}} onClick={() => props.changePage("class")}><h2>Sort By Class</h2></Button>
+                </Row>
+            
         </Container>
     </Container>
 }

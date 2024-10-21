@@ -16,11 +16,6 @@ function Header(props:Props) {
                     <Nav.Link eventKey="role">Role</Nav.Link>
                     <Nav.Link eventKey="class">Class</Nav.Link>
                 </Nav>
-                <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text>
-                        <a onClick={() => props.changePage("admin")}>Admin Access</a>
-                    </Navbar.Text>
-                </Navbar.Collapse>
             </Container>
         </Navbar>
 }
