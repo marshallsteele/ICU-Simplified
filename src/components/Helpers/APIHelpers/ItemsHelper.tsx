@@ -4,7 +4,7 @@
 //https://blog.logrocket.com/how-to-build-component-library-react-typescript/
 //https://www.freecodecamp.org/news/how-to-consume-rest-apis-in-react/
 
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 
 //Rune id's need to be maintained, could scrape wiki but unreliable and also potentially outdated
 //https://wiki.guildwars2.com/wiki/Rune
