@@ -4,6 +4,10 @@ import BuildCard from "./BuildCard";
 import { specImages } from "../../assets/gw2Assets/specs/SpecImages";
 import { build } from "../Helpers/BuildHelper";
 import { useRef, useState } from "react";
+import { TraitLine } from "@discretize/gw2-ui-new";
+import '@discretize/gw2-ui-new/dist/default_style.css';
+import '@discretize/gw2-ui-new/dist/index.css';
+import '@discretize/typeface-menomonia';
 
 interface Props {
   buildImages:Map<string, string>;
@@ -62,8 +66,6 @@ function ClassCatalogue(props:Props) {
 
     const handleClose = () => setShowModal(false);
     const handleShow = () => setShowModal(true);
-
-    const [imageLoading, setImageLoading] = useState(true);
 
     function handleBuildSelect(build:build) {
       setBuild({
@@ -222,8 +224,7 @@ function ClassCatalogue(props:Props) {
                   </Container>
                   <br />
                   <Container style={{padding:0}}>
-                  <Spinner style={{display: imageLoading ? "block" : "none"}} ></Spinner>
-                  <Image fluid rounded src={buildImages.get('build' + build.id)} style={{display: imageLoading ? "none" : "block"}} onLoad={() => setImageLoading(false)}></Image>
+                    <TraitLine id={41} defaultSelected={[227, 214, 1672]} selectable resettable />
                   </Container>
                   <br />
                 </Col>
