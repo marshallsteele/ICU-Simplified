@@ -6,14 +6,12 @@ import { useRef, useState } from "react";
 import { build } from "../Helpers/BuildHelper";
 
 interface Props {
-  buildImages:Map<string, string>;
   runes:any[];
   sigils:any[];
   relics:any[];
 }
 
 function RoleCatalogue(props:Props) {
-    let buildImages = props.buildImages;
     let runes = props.runes;
     let sigils = props.sigils;
     let relics = props.relics;
@@ -33,6 +31,10 @@ function RoleCatalogue(props:Props) {
       notes: [""],
       exoticGearLink:"",
       ascendedGearLink:"",
+      traitLines:[0, 0, 0],
+      traitLine1:[0, 0, 0],
+      traitLine2:[0, 0, 0],
+      traitLine3:[0, 0, 0],
       buildTemplate:"",
       primaryWeapons:[""],
       secondaryWeapons:[""],
@@ -48,8 +50,6 @@ function RoleCatalogue(props:Props) {
     const handleClose = () => setShowModal(false);
     const handleShow = () => setShowModal(true);
 
-    const [imageLoading, setImageLoading] = useState(true);
-
     function handleBuildSelect(build:build) {
       setBuild({
         id:build.id,
@@ -60,6 +60,10 @@ function RoleCatalogue(props:Props) {
         spec:build.spec,
         notes:build.notes,
         exoticGearLink:build.exoticGearLink,
+        traitLines:build.traitLines,
+        traitLine1:build.traitLine1,
+        traitLine2:build.traitLine2,
+        traitLine3:build.traitLine3,
         ascendedGearLink:build.ascendedGearLink,
         buildTemplate:build.buildTemplate,
         primaryWeapons:build.primaryWeapons,
@@ -202,8 +206,7 @@ function RoleCatalogue(props:Props) {
                   </Container>
                   <br />
                   <Container style={{padding:0}}>
-                  <Spinner style={{display: imageLoading ? "block" : "none"}} ></Spinner>
-                  <Image fluid rounded src={buildImages.get('build' + build.id)} style={{display: imageLoading ? "none" : "block"}} onLoad={() => setImageLoading(false)}></Image>
+
                   </Container>
                   <br />
                 </Col>

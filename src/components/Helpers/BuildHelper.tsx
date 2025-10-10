@@ -10,6 +10,10 @@ export interface build {
     notes:string[];
     exoticGearLink:string;
     ascendedGearLink:string;
+    traitLines:number[];
+    traitLine1:number[],
+    traitLine2:number[],
+    traitLine3:number[],
     buildTemplate:string;
     primaryWeapons:string[];
     secondaryWeapons:string[];
