@@ -6,17 +6,7 @@ import { build } from "../Helpers/BuildHelper";
 import { useRef, useState } from "react";
 import BuildModal from "./BuildModal";
 
-interface Props {
-  runes:any[];
-  sigils:any[];
-  relics:any[];
-}
-
-function ClassCatalogue(props:Props) {
-    let runes = props.runes;
-    let sigils = props.sigils;
-    let relics = props.relics;
-
+function ClassCatalogue() {
     var guardianBuilds = getAllClassBuilds("Guardian");
     var revenantBuilds = getAllClassBuilds("Revenant");
     var warriorBuilds = getAllClassBuilds("Warrior");
@@ -45,18 +35,20 @@ function ClassCatalogue(props:Props) {
       class: "",
       spec: "",
       notes: [""],
-      exoticGearLink:"",
-      ascendedGearLink:"",
+      variations: [""],
+      healSkill: 0,
+      utilitySkills: [0, 0, 0],
+      eliteSkill: 0,
       traitLines:[0, 0, 0],
       traitLine1:[0, 0, 0],
       traitLine2:[0, 0, 0],
       traitLine3:[0, 0, 0],
       buildTemplate:"",
-      primaryWeapons:[""],
-      secondaryWeapons:[""],
-      runes:"",
-      sigils:[""],
-      relic:"",
+      primaryWeapons:[{type:"", stat:"", sigils:[0, 0]}],
+      secondaryWeapons:[{type:"", stat:"", sigils:[0, 0]}],
+      gear:[{type:"", stat:"", rune:0}],
+      accessories:[{type:"", stat:""}],
+      relic:0,
       dpsReportLink:"",
       instructions:[""]
     })
@@ -75,17 +67,19 @@ function ClassCatalogue(props:Props) {
         class:build.class,
         spec:build.spec,
         notes:build.notes,
-        exoticGearLink:build.exoticGearLink,
+        variations:build.variations,
+        healSkill:build.healSkill,
+        utilitySkills:build.utilitySkills,
+        eliteSkill:build.eliteSkill,
         traitLines:build.traitLines,
         traitLine1:build.traitLine1,
         traitLine2:build.traitLine2,
         traitLine3:build.traitLine3,
-        ascendedGearLink:build.ascendedGearLink,
         buildTemplate:build.buildTemplate,
         primaryWeapons:build.primaryWeapons,
         secondaryWeapons:build.secondaryWeapons,
-        runes:build.runes,
-        sigils:build.sigils,
+        gear:build.gear,
+        accessories:build.accessories,
         relic:build.relic,
         dpsReportLink:build.dpsReportLink,
         instructions:build.instructions
@@ -105,7 +99,7 @@ function ClassCatalogue(props:Props) {
     const SCROLL_OFFSET = 100;
 
     return <Container style={{paddingTop:50, color:"white"}}>
-      <BuildModal build={build} relics={relics} sigils={sigils} runes={runes} showModal={showModal} handleClose={handleClose}></BuildModal>
+      <BuildModal build={build} showModal={showModal} handleClose={handleClose}></BuildModal>
       <Navbar bg="dark" style={{
         position: "sticky",
         top: 56,

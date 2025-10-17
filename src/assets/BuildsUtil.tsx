@@ -173,38 +173,38 @@ class BuildsUtil {
 
     private static checkSotORequired(build:build) {
         var weapons = (SotOWeapons as any)[build.class];
-        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === weapons[0])
-            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === weapons[0])
-            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === weapons[1])
-            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === weapons[1])) return true;
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === weapons[0])
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === weapons[0])
+            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === weapons[1])
+            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === weapons[1])) return true;
         
         //Check Weapon Master Training
         var eliteSpec = (HoTSpecs as any)[build.class];
         if (build.spec !== eliteSpec.name) {
-            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
-                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === eliteSpec.offWeapon)
+                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === eliteSpec.offWeapon)) return true;
         }
         eliteSpec = (PoFSpecs as any)[build.class];
         if (build.spec !== eliteSpec.name) {
-            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
-                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === eliteSpec.offWeapon)
+                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === eliteSpec.offWeapon)) return true;
         }
         eliteSpec = (EoDSpecs as any)[build.class];
         if (build.spec !== eliteSpec.name) {
-            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
-                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === eliteSpec.offWeapon)
+                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === eliteSpec.offWeapon)) return true;
         }
     }
 
     private static checkJWRequired(build:build) {
-        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === JWWeapon)
-            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === JWWeapon)) return true;
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === JWWeapon)
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === JWWeapon)) return true;
     }
 
     public static getRequiredExpansions(build:build) {

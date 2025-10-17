@@ -8,20 +8,39 @@ export interface build {
     class:string;
     spec:string;
     notes:string[];
-    exoticGearLink:string;
-    ascendedGearLink:string;
+    variations:string[];
+    healSkill:number;
+    utilitySkills:number[];
+    eliteSkill:number;
     traitLines:number[];
     traitLine1:number[],
     traitLine2:number[],
     traitLine3:number[],
     buildTemplate:string;
-    primaryWeapons:string[];
-    secondaryWeapons:string[];
-    runes:string;
-    sigils:string[];
-    relic:string;
+    primaryWeapons:weapon[];
+    secondaryWeapons:weapon[];
+    gear:armour[];
+    accessories:accessory[];
+    relic:number;
     dpsReportLink:string;
     instructions:string[];
+}
+
+export interface weapon {
+    type:string;
+    stat:string;
+    sigils:number[];
+}
+
+export interface armour {
+    type:string;
+    stat:string;
+    rune:number;
+}
+
+export interface accessory {
+    type: string;
+    stat:string;
 }
 
 export function getAllBuilds() {
