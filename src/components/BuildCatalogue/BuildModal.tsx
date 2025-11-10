@@ -137,19 +137,35 @@ function BuildModal(props: Props) {
                           display: "inline-block",
                         }}
                       >
-                        <CreateItem
-                          style={{
-                            display: "block",
-                            zIndex: 1,
-                            padding: 0,
-                            margin: 0,
-                            lineHeight: 1,
-                          }}
-                          disableText
-                          type={build.primaryWeapons[0].type}
-                          stat={build.primaryWeapons[0].stat}
-                          upgrades={build.primaryWeapons[0].sigils}
-                        ></CreateItem>
+                        {build.secondaryWeapons[0].type != "Spear" ? (
+                          <CreateItem
+                            style={{
+                              display: "block",
+                              zIndex: 1,
+                              padding: 0,
+                              margin: 0,
+                              lineHeight: 1,
+                            }}
+                            disableText
+                            type={build.primaryWeapons[0].type}
+                            stat={build.primaryWeapons[0].stat}
+                            upgrades={build.primaryWeapons[0].sigils}
+                          ></CreateItem>
+                        ) : (
+                          <Item
+                            style={{
+                              display: "block",
+                              zIndex: 1,
+                              padding: 0,
+                              margin: 0,
+                              lineHeight: 1,
+                            }}
+                            disableText
+                            id={103815}
+                            stat={build.primaryWeapons[0].stat}
+                            upgrades={build.primaryWeapons[0].sigils}
+                          ></Item>
+                        )}
                         <Item
                           style={{
                             fontSize: "2rem",
@@ -269,19 +285,35 @@ function BuildModal(props: Props) {
                             display: "inline-block",
                           }}
                         >
-                          <CreateItem
-                            style={{
-                              display: "block",
-                              zIndex: 1,
-                              padding: 0,
-                              margin: 0,
-                              lineHeight: 1,
-                            }}
-                            disableText
-                            type={build.secondaryWeapons[0].type}
-                            stat={build.secondaryWeapons[0].stat}
-                            upgrades={build.secondaryWeapons[0].sigils}
-                          ></CreateItem>
+                          {build.secondaryWeapons[0].type != "Spear" ? (
+                            <CreateItem
+                              style={{
+                                display: "block",
+                                zIndex: 1,
+                                padding: 0,
+                                margin: 0,
+                                lineHeight: 1,
+                              }}
+                              disableText
+                              type={build.secondaryWeapons[0].type}
+                              stat={build.secondaryWeapons[0].stat}
+                              upgrades={build.secondaryWeapons[0].sigils}
+                            ></CreateItem>
+                          ) : (
+                            <Item
+                              style={{
+                                display: "block",
+                                zIndex: 1,
+                                padding: 0,
+                                margin: 0,
+                                lineHeight: 1,
+                              }}
+                              disableText
+                              id={103815}
+                              stat={build.secondaryWeapons[0].stat}
+                              upgrades={build.secondaryWeapons[0].sigils}
+                            ></Item>
+                          )}
                           <Item
                             style={{
                               fontSize: "2rem",
