@@ -1,6 +1,176 @@
 import { build } from "../components/Helpers/BuildHelper"
 
-var HoTSpecs = {
+const specs = {
+    'Guardian': ["Guardian", "Dragonhunter", "Firebrand", "Willbender"],
+    'Revenant': ["Revenant", "Herald", "Renegade", "Vindicator"],
+    'Warrior': ["Warrior", "Berserker", "Spellbreaker", "Bladesworn"],
+    'Engineer': ["Engineer", "Scrapper", "Holosmith", "Mechanist"],
+    'Ranger': ["Ranger", "Druid", "Soulbeast", "Untamed"],
+    'Thief': ["Thief", "Daredevil", "Deadeye", "Specter"],
+    'Elementalist': ["Elementalist", "Tempest", "Weaver", "Catalyst"],
+    'Mesmer': ["Mesmer", "Chronomancer", "Mirage", "Virtuoso"],
+    'Necromancer': ["Necromancer", "Reaper", "Scourge", "Harbinger"]
+}
+
+const revLegends = [
+    { id: 1, name: "Jalis Ironhammer" },
+    { id: 2, name: "Ventari" },
+    { id: 3, name: "Shiro Tagachi" },
+    { id: 4, name: "Mallyx the Unyielding" },
+    { id: 5, name: "Glint" },
+    { id: 6, name: "Kalla Scorchrazor" },
+]
+
+const weaponTypes = [
+  { type: "Sword", hands: 1 },
+  { type: "Dagger", hands: 1 },
+  { type: "Axe", hands: 1 },
+  { type: "Mace", hands: 1 },
+  { type: "Pistol", hands: 1 },
+  { type: "Scepter", hands: 1 },
+  { type: "Focus", hands: 1 },
+  { type: "Shield", hands: 1 },
+  { type: "Torch", hands: 1 },
+  { type: "Warhorn", hands: 1 },
+
+  { type: "Greatsword", hands: 2 },
+  { type: "Hammer", hands: 2 },
+  { type: "Staff", hands: 2 },
+  { type: "Longbow", hands: 2 },
+  { type: "Shortbow", hands: 2 },
+  { type: "Rifle", hands: 2 },
+  { type: "Spear", hands:2 }
+]
+
+const weaponStats = [
+  "Berserker",
+  "Zealot",
+  "Soldier",
+  "Forsaken",
+  "Valkyrie",
+  "Harrier",
+  "Commander",
+  "Demolisher",
+  "Marauder",
+  "Vigilant",
+  "Crusader",
+  "Wanderer",
+  "Diviner",
+  "Dragon",
+  "Viper",
+  "Grieving",
+  "Marshal",
+  "Rampager",
+  "Assassin",
+  "Seraph",
+  "Knight",
+  "Cavalier",
+  "Nomad",
+  "Settler",
+  "Giver",
+  "Trailblazer",
+  "Minstrel",
+  "Sentinel",
+  "Shaman",
+  "Ritualist",
+  "Plaguedoctor",
+  "Sinister",
+  "Carrion",
+  "Rabid",
+  "Dire",
+  "Apostate",
+  "Bringer",
+  "Cleric",
+  "Magi",
+  "Apothecary",
+  "Celestial"
+]
+
+const armourStats = [
+  "Berserker",
+  "Zealot",
+  "Soldier",
+  "Valkyrie",
+  "Harrier",
+  "Commander",
+  "Demolisher",
+  "Marauder",
+  "Vigilant",
+  "Crusader",
+  "Wanderer",
+  "Diviner",
+  "Dragon",
+  "Viper",
+  "Grieving",
+  "Marshal",
+  "Rampager",
+  "Assassin",
+  "Seraph",
+  "Knight",
+  "Cavalier",
+  "Nomad",
+  "Settler",
+  "Giver",
+  "Trailblazer",
+  "Minstrel",
+  "Sentinel",
+  "Shaman",
+  "Ritualist",
+  "Plaguedoctor",
+  "Sinister",
+  "Carrion",
+  "Rabid",
+  "Dire",
+  "Bringer",
+  "Cleric",
+  "Magi",
+  "Apothecary",
+  "Celestial"
+]
+
+const accessoryStats = [
+  "Berserker",
+  "Zealot",
+  "Soldier",
+  "Valkyrie",
+  "Harrier",
+  "Commander",
+  "Demolisher",
+  "Marauder",
+  "Vigilant",
+  "Crusader",
+  "Wanderer",
+  "Diviner",
+  "Dragon",
+  "Viper",
+  "Grieving",
+  "Marshal",
+  "Rampager",
+  "Assassin",
+  "Seraph",
+  "Knight",
+  "Cavalier",
+  "Nomad",
+  "Settler",
+  "Giver",
+  "Trailblazer",
+  "Minstrel",
+  "Sentinel",
+  "Shaman",
+  "Ritualist",
+  "Plaguedoctor",
+  "Sinister",
+  "Carrion",
+  "Rabid",
+  "Dire",
+  "Bringer",
+  "Cleric",
+  "Magi",
+  "Apothecary",
+  "Celestial"
+]
+
+const HoTSpecs = {
     'Guardian': {
         name:'Dragonhunter',
         mainWeapon:'Longbow',
@@ -173,38 +343,38 @@ class BuildsUtil {
 
     private static checkSotORequired(build:build) {
         var weapons = (SotOWeapons as any)[build.class];
-        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === weapons[0])
-            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === weapons[0])
-            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === weapons[1])
-            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === weapons[1])) return true;
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === weapons[0])
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === weapons[0])
+            || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === weapons[1])
+            || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === weapons[1])) return true;
         
         //Check Weapon Master Training
         var eliteSpec = (HoTSpecs as any)[build.class];
         if (build.spec !== eliteSpec.name) {
-            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
-                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === eliteSpec.offWeapon)
+                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === eliteSpec.offWeapon)) return true;
         }
         eliteSpec = (PoFSpecs as any)[build.class];
         if (build.spec !== eliteSpec.name) {
-            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
-                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === eliteSpec.offWeapon)
+                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === eliteSpec.offWeapon)) return true;
         }
         eliteSpec = (EoDSpecs as any)[build.class];
         if (build.spec !== eliteSpec.name) {
-            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === eliteSpec.mainWeapon)
-                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1] === eliteSpec.offWeapon)
-                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1] === eliteSpec.offWeapon)) return true;
+            if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === eliteSpec.mainWeapon)
+                || (build.primaryWeapons.length > 1 && build.primaryWeapons[1].type === eliteSpec.offWeapon)
+                || (build.secondaryWeapons.length > 1 && build.secondaryWeapons[1].type === eliteSpec.offWeapon)) return true;
         }
     }
 
     private static checkJWRequired(build:build) {
-        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0] === JWWeapon)
-            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0] === JWWeapon)) return true;
+        if ((build.primaryWeapons.length > 0 && build.primaryWeapons[0].type === JWWeapon)
+            || (build.secondaryWeapons.length > 0 && build.secondaryWeapons[0].type === JWWeapon)) return true;
     }
 
     public static getRequiredExpansions(build:build) {
@@ -215,6 +385,30 @@ class BuildsUtil {
         if (this.checkSotORequired(build)) requiredExpansions.push("SotO");
         if (this.checkJWRequired(build)) requiredExpansions.push("JW");
         return requiredExpansions;
+    }
+
+    public static getSpecs(profession:string) {
+        return (specs as any)[profession];
+    }
+
+    public static getWeapons() {
+        return weaponTypes.sort((a, b) => (a.type > b.type ? 1 : -1));
+    }
+
+    public static getWeaponStats() {
+        return weaponStats.sort();
+    }
+
+    public static getArmourStats() {
+        return armourStats.sort();
+    }
+
+    public static getAccessoryStats() {
+        return accessoryStats.sort();
+    }
+
+    public static getRevenantLegends() {
+        return revLegends.sort();
     }
 }
 
