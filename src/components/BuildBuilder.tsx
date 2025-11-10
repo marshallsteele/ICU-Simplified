@@ -18,6 +18,9 @@ import {
   UseFieldArrayReturn,
 } from "react-hook-form";
 import { TraitLine } from "@discretize/gw2-ui-new";
+import "@discretize/gw2-ui-new/dist/default_style.css";
+import "@discretize/gw2-ui-new/dist/index.css";
+import "@discretize/typeface-menomonia";
 
 const GW2APIURL = "https://api.guildwars2.com/v2";
 const professionsEndpoint = GW2APIURL + "/professions";
