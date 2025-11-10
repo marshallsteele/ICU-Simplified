@@ -163,11 +163,14 @@ function BuildModal(props: Props) {
                   <br />
                   </div>
                   }
+                  <Container style={{padding:16, margin:0, backgroundColor: "rgba(255, 255, 255, 0.15)", borderRadius: "1rem"}}>
+                  <h3>Trait Lines & Traits</h3>
                   <div style={{padding:0, display:'flex', flexDirection:'column', alignItems:'center'}}>
                     <TraitLine id={build.traitLines[0]} defaultSelected={build.traitLine1} selectable={false} resettable />
                     <TraitLine id={build.traitLines[1]} defaultSelected={build.traitLine2} selectable={false} resettable />
                     <TraitLine id={build.traitLines[2]} defaultSelected={build.traitLine3} selectable={false} resettable />
                   </div>
+                  </Container>
                 </Col>
               </Row>
               <br />

@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage';
 import { useState } from 'react';
 import RoleCatalogue from './components/BuildCatalogue/RoleCatalogue';
 import ClassCatalogue from './components/BuildCatalogue/ClassCatalogue';
+import BuildBuilder from './components/BuildBuilder';
 
 const imageUrls = Object.values(import.meta.glob('./assets/gw2Assets/buildImages/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, query: '?url', import: 'default' }));
 var buildImages = new Map<string, string>();
@@ -27,6 +28,7 @@ function App() {
     {page === "home" && <LandingPage changePage={changePage} />}
     {page === "role" && <RoleCatalogue/>}
     {page === "class" && <ClassCatalogue/>}
+    {page === "builder" && <BuildBuilder/>}
     <Footer />
     </Col>
   </Container>

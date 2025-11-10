@@ -16,6 +16,11 @@ function Header(props:Props) {
                     <Nav.Link eventKey="role">Role</Nav.Link>
                     <Nav.Link eventKey="class">Class</Nav.Link>
                 </Nav>
+                    <Nav className="justify-content-end" 
+                    activeKey={props.page}
+                    onSelect={(selectedKey) => props.changePage(selectedKey)}>
+                    <Nav.Link eventKey="builder">Builder</Nav.Link>
+                </Nav>
             </Container>
         </Navbar>
 }

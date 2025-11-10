@@ -13,7 +13,6 @@ function RoleCatalogue() {
     var quicknessDPSBuilds = getAllQuicknessDPSBuilds();
 
     const [build, setBuild] = useState({
-      id:0,
       role: "",
       dmgType: "",
       boon: "",
@@ -45,7 +44,6 @@ function RoleCatalogue() {
 
     function handleBuildSelect(build:build) {
       setBuild({
-        id:build.id,
         role:build.role,
         dmgType:build.dmgType,
         boon:build.boon,

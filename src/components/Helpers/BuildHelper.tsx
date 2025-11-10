@@ -1,7 +1,6 @@
 import { builds } from "../../assets/Builds";
 
 export interface build {
-    id:number;
     role:string;
     dmgType:string;
     boon:string;
