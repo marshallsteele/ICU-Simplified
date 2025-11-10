@@ -7325,7 +7325,7 @@ export const builds = [
     ],
     traitLines: [14, 3, 63],
     healSkill: 0,
-    utilitySkills: [4, 6],
+    utilitySkills: [28494, 41858],
     eliteSkill: 0,
     primaryWeapons: [
       {
