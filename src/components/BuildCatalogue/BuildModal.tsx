@@ -137,7 +137,7 @@ function BuildModal(props: Props) {
                           display: "inline-block",
                         }}
                       >
-                        {build.secondaryWeapons[0].type != "Spear" ? (
+                        {build.primaryWeapons[0].type != "Spear" ? (
                           <CreateItem
                             style={{
                               display: "block",
@@ -158,9 +158,14 @@ function BuildModal(props: Props) {
                               zIndex: 1,
                               padding: 0,
                               margin: 0,
-                              lineHeight: 1,
+                              lineHeight: 3,
+                              fontSize: "3rem",
                             }}
-                            disableText
+                            text={
+                              build.primaryWeapons[0].stat +
+                              "'s " +
+                              build.primaryWeapons[0].type
+                            }
                             id={103815}
                             stat={build.primaryWeapons[0].stat}
                             upgrades={build.primaryWeapons[0].sigils}
@@ -306,9 +311,14 @@ function BuildModal(props: Props) {
                                 zIndex: 1,
                                 padding: 0,
                                 margin: 0,
-                                lineHeight: 1,
+                                lineHeight: 3,
+                                fontSize: "3rem",
                               }}
-                              disableText
+                              text={
+                                build.primaryWeapons[0].stat +
+                                "'s " +
+                                build.primaryWeapons[0].type
+                              }
                               id={103815}
                               stat={build.secondaryWeapons[0].stat}
                               upgrades={build.secondaryWeapons[0].sigils}

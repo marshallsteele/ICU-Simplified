@@ -13,13 +13,13 @@ const specs = {
 };
 
 const revLegends = [
-  { id: 26650, name: "Jalis Ironhammer" },
-  { id: 28141, name: "Ventari" },
-  { id: 27659, name: "Shiro Tagachi" },
-  { id: 28376, name: "Mallyx the Unyielding" },
+  { id: 28419, name: "Jalis Ironhammer" },
+  { id: 28195, name: "Ventari" },
+  { id: 28134, name: "Shiro Tagachi" },
+  { id: 28494, name: "Mallyx the Unyielding" },
   { id: 28085, name: "Glint" },
   { id: 41858, name: "Kalla Scorchrazor" },
-  { id: 62749, name: "Archemorus and Saint Viktor" },
+  { id: 62891, name: "Archemorus and Saint Viktor" },
   { id: 76610, name: "Razah" },
 ];
 

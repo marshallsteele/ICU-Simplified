@@ -6568,7 +6568,7 @@ export const builds = [
     ],
     traitLines: [3, 15, 52],
     healSkill: 0,
-    utilitySkills: [26650, 27659],
+    utilitySkills: [28419, 28134],
     eliteSkill: 0,
     primaryWeapons: [
       {
@@ -6661,7 +6661,7 @@ export const builds = [
     ],
     traitLines: [14, 3, 52],
     healSkill: 0,
-    utilitySkills: [28376, 28085],
+    utilitySkills: [28494, 28085],
     eliteSkill: 0,
     primaryWeapons: [
       {
@@ -6761,7 +6761,7 @@ export const builds = [
     ],
     traitLines: [3, 15, 63],
     healSkill: 0,
-    utilitySkills: [27659, 41858],
+    utilitySkills: [28134, 41858],
     eliteSkill: 0,
     primaryWeapons: [
       {
@@ -6858,7 +6858,7 @@ export const builds = [
     ],
     traitLines: [14, 3, 63],
     healSkill: 0,
-    utilitySkills: [41858, 28376],
+    utilitySkills: [41858, 28494],
     eliteSkill: 0,
     primaryWeapons: [
       {
@@ -6952,7 +6952,7 @@ export const builds = [
     ],
     traitLines: [3, 15, 69],
     healSkill: 0,
-    utilitySkills: [27659, 26650],
+    utilitySkills: [28134, 28419],
     eliteSkill: 0,
     primaryWeapons: [
       {
@@ -7044,7 +7044,7 @@ export const builds = [
     ],
     traitLines: [3, 15, 52],
     healSkill: 0,
-    utilitySkills: [27659, 26650],
+    utilitySkills: [28134, 28419],
     eliteSkill: 0,
     primaryWeapons: [
       {
@@ -7137,7 +7137,7 @@ export const builds = [
     ],
     traitLines: [14, 3, 52],
     healSkill: 0,
-    utilitySkills: [28085, 28376],
+    utilitySkills: [28085, 28494],
     eliteSkill: 0,
     primaryWeapons: [
       {
@@ -7233,7 +7233,7 @@ export const builds = [
     ],
     traitLines: [3, 15, 63],
     healSkill: 0,
-    utilitySkills: [27659, 26650],
+    utilitySkills: [28134, 28419],
     eliteSkill: 0,
     primaryWeapons: [
       {
