@@ -6567,9 +6567,9 @@ export const builds = [
       },
     ],
     traitLines: [3, 15, 52],
-    healSkill: null,
-    utilitySkills: [1, 3, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [1, 3],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Greatsword",
@@ -6660,9 +6660,9 @@ export const builds = [
       },
     ],
     traitLines: [14, 3, 52],
-    healSkill: null,
-    utilitySkills: [4, 5, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [4, 5],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Mace",
@@ -6760,9 +6760,9 @@ export const builds = [
       },
     ],
     traitLines: [3, 15, 63],
-    healSkill: null,
-    utilitySkills: [3, 6, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [3, 6],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Sword",
@@ -6857,9 +6857,9 @@ export const builds = [
       },
     ],
     traitLines: [14, 3, 63],
-    healSkill: null,
-    utilitySkills: [6, 4, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [6, 4],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Spear",
@@ -6951,9 +6951,9 @@ export const builds = [
       },
     ],
     traitLines: [3, 15, 69],
-    healSkill: null,
-    utilitySkills: [3, 1, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [3, 1],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Greatsword",
@@ -7043,9 +7043,9 @@ export const builds = [
       },
     ],
     traitLines: [3, 15, 52],
-    healSkill: null,
-    utilitySkills: [3, 1, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [3, 1],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Greatsword",
@@ -7136,9 +7136,9 @@ export const builds = [
       },
     ],
     traitLines: [14, 3, 52],
-    healSkill: null,
-    utilitySkills: [5, 4, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [5, 4],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Mace",
@@ -7232,9 +7232,9 @@ export const builds = [
       },
     ],
     traitLines: [3, 15, 63],
-    healSkill: null,
-    utilitySkills: [3, 1, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [3, 1],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Greatsword",
@@ -7324,9 +7324,9 @@ export const builds = [
       },
     ],
     traitLines: [14, 3, 63],
-    healSkill: null,
-    utilitySkills: [4, 6, null],
-    eliteSkill: null,
+    healSkill: 0,
+    utilitySkills: [4, 6],
+    eliteSkill: 0,
     primaryWeapons: [
       {
         type: "Mace",
