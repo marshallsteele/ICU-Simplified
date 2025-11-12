@@ -1,15 +1,15 @@
 import { build } from "../components/Helpers/BuildHelper";
 
 const specs = {
-  Guardian: ["Guardian", "Dragonhunter", "Firebrand", "Willbender"],
-  Revenant: ["Revenant", "Herald", "Renegade", "Vindicator"],
-  Warrior: ["Warrior", "Berserker", "Spellbreaker", "Bladesworn"],
-  Engineer: ["Engineer", "Scrapper", "Holosmith", "Mechanist"],
-  Ranger: ["Ranger", "Druid", "Soulbeast", "Untamed"],
-  Thief: ["Thief", "Daredevil", "Deadeye", "Specter"],
-  Elementalist: ["Elementalist", "Tempest", "Weaver", "Catalyst"],
-  Mesmer: ["Mesmer", "Chronomancer", "Mirage", "Virtuoso"],
-  Necromancer: ["Necromancer", "Reaper", "Scourge", "Harbinger"],
+  Guardian: ["Guardian", "Dragonhunter", "Firebrand", "Willbender", "Luminary"],
+  Revenant: ["Revenant", "Herald", "Renegade", "Vindicator", "Conduit"],
+  Warrior: ["Warrior", "Berserker", "Spellbreaker", "Bladesworn", "Paragon"],
+  Engineer: ["Engineer", "Scrapper", "Holosmith", "Mechanist", "Amalgam"],
+  Ranger: ["Ranger", "Druid", "Soulbeast", "Untamed", "Galeshot"],
+  Thief: ["Thief", "Daredevil", "Deadeye", "Specter", "Antiquary"],
+  Elementalist: ["Elementalist", "Tempest", "Weaver", "Catalyst", "Evoker"],
+  Mesmer: ["Mesmer", "Chronomancer", "Mirage", "Virtuoso", "Troubadour"],
+  Necromancer: ["Necromancer", "Reaper", "Scourge", "Harbinger", "Ritualist"],
 };
 
 const revLegends = [
@@ -328,6 +328,36 @@ const SotOWeapons = {
   Necromancer: ["Sword", "Sword"],
 };
 
+const VoESpecs = {
+  Guardian: {
+    name: "Luminary",
+  },
+  Revenant: {
+    name: "Conduit",
+  },
+  Warrior: {
+    name: "Paragon",
+  },
+  Engineer: {
+    name: "Amalgam",
+  },
+  Ranger: {
+    name: "Ranger",
+  },
+  Thief: {
+    name: "Antiquary",
+  },
+  Elementalist: {
+    name: "Evoker",
+  },
+  Mesmer: {
+    name: "Troubadour",
+  },
+  Necromancer: {
+    name: "Ritualist",
+  },
+};
+
 const JWWeapon = "Spear";
 
 class BuildsUtil {
@@ -341,6 +371,10 @@ class BuildsUtil {
 
   private static checkEoDRequired(build: build) {
     return build.spec === (EoDSpecs as any)[build.class].name;
+  }
+
+  private static checkVoERequired(build: build) {
+    return build.spec === (VoESpecs as any)[build.class].name;
   }
 
   private static checkSotORequired(build: build) {
@@ -419,6 +453,7 @@ class BuildsUtil {
     if (this.checkEoDRequired(build)) requiredExpansions.push("EoD");
     if (this.checkSotORequired(build)) requiredExpansions.push("SotO");
     if (this.checkJWRequired(build)) requiredExpansions.push("JW");
+    if (this.checkVoERequired(build)) requiredExpansions.push("VoE");
     return requiredExpansions;
   }
 

@@ -137,40 +137,23 @@ function BuildModal(props: Props) {
                           display: "inline-block",
                         }}
                       >
-                        {build.primaryWeapons[0].type != "Spear" ? (
-                          <CreateItem
-                            style={{
-                              display: "block",
-                              zIndex: 1,
-                              padding: 0,
-                              margin: 0,
-                              lineHeight: 1,
-                            }}
-                            disableText
-                            type={build.primaryWeapons[0].type}
-                            stat={build.primaryWeapons[0].stat}
-                            upgrades={build.primaryWeapons[0].sigils}
-                          ></CreateItem>
-                        ) : (
-                          <Item
-                            style={{
-                              display: "block",
-                              zIndex: 1,
-                              padding: 0,
-                              margin: 0,
-                              lineHeight: 3,
-                              fontSize: "3rem",
-                            }}
-                            text={
-                              build.primaryWeapons[0].stat +
-                              "'s " +
-                              build.primaryWeapons[0].type
-                            }
-                            id={103815}
-                            stat={build.primaryWeapons[0].stat}
-                            upgrades={build.primaryWeapons[0].sigils}
-                          ></Item>
-                        )}
+                        <CreateItem
+                          style={{
+                            display: "block",
+                            zIndex: 1,
+                            padding: 0,
+                            margin: 0,
+                            lineHeight: 1,
+                          }}
+                          disableText
+                          type={
+                            build.primaryWeapons[0].type === "Spear"
+                              ? "Harpoon"
+                              : build.primaryWeapons[0].type
+                          }
+                          stat={build.primaryWeapons[0].stat}
+                          upgrades={build.primaryWeapons[0].sigils}
+                        ></CreateItem>
                         <Item
                           style={{
                             fontSize: "2rem",
@@ -290,40 +273,23 @@ function BuildModal(props: Props) {
                             display: "inline-block",
                           }}
                         >
-                          {build.secondaryWeapons[0].type != "Spear" ? (
-                            <CreateItem
-                              style={{
-                                display: "block",
-                                zIndex: 1,
-                                padding: 0,
-                                margin: 0,
-                                lineHeight: 1,
-                              }}
-                              disableText
-                              type={build.secondaryWeapons[0].type}
-                              stat={build.secondaryWeapons[0].stat}
-                              upgrades={build.secondaryWeapons[0].sigils}
-                            ></CreateItem>
-                          ) : (
-                            <Item
-                              style={{
-                                display: "block",
-                                zIndex: 1,
-                                padding: 0,
-                                margin: 0,
-                                lineHeight: 3,
-                                fontSize: "3rem",
-                              }}
-                              text={
-                                build.primaryWeapons[0].stat +
-                                "'s " +
-                                build.primaryWeapons[0].type
-                              }
-                              id={103815}
-                              stat={build.secondaryWeapons[0].stat}
-                              upgrades={build.secondaryWeapons[0].sigils}
-                            ></Item>
-                          )}
+                          <CreateItem
+                            style={{
+                              display: "block",
+                              zIndex: 1,
+                              padding: 0,
+                              margin: 0,
+                              lineHeight: 1,
+                            }}
+                            disableText
+                            type={
+                              build.secondaryWeapons[0].type === "Spear"
+                                ? "Harpoon"
+                                : build.secondaryWeapons[0].type
+                            }
+                            stat={build.secondaryWeapons[0].stat}
+                            upgrades={build.secondaryWeapons[0].sigils}
+                          ></CreateItem>
                           <Item
                             style={{
                               fontSize: "2rem",
